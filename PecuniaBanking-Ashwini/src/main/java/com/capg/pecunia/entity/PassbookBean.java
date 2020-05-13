@@ -12,38 +12,32 @@ public class PassbookBean {
 
 	@Id
 	private long accountNumber;
-	private String userName;
+	private String customerName;
 	private double amount;
-
 	public long getAccountNumber() {
 		return accountNumber;
 	}
-
 	public void setAccountNumber(long accountNumber) {
 		this.accountNumber = accountNumber;
 	}
-
-	public String getUserName() {
-		return userName;
+	public String getCustomerName() {
+		return customerName;
 	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
 	}
-
 	public double getAmount() {
 		return amount;
 	}
-
-	public void setAmount(double balance) {
-		this.amount = balance;
+	public void setAmount(double amount) {
+		this.amount = amount;
 	}
-
 	@Override
 	public String toString() {
-		return "PassbookBean [accountNumber=" + accountNumber + ", userName=" + userName + ", amount=" + amount + "]";
+		return "PassbookBean [accountNumber=" + accountNumber + ", customerName=" + customerName + ", amount=" + amount
+				+ "]";
 	}
 
-			
+				
 
 }

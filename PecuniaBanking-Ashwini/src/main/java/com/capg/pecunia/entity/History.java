@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="Trans_Spring")
+@Table(name="Pecunia_Transactions")
 public class History {
 	
 	

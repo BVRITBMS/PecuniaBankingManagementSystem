@@ -1,0 +1,9 @@
+postman
+to add: method:POST
+http://localhost:8085/account/create
+to update: method:PUT
+http://localhost:8085/account/update/id
+to findByID: method:GET
+http://localhost:8085/account/grtdetails/id
+to getAlldetails: metod:GET
+http://localhost:8085/account/bank/findall
