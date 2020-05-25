@@ -1,0 +1,50 @@
+<h3 aria-label="breadcrumb" style="margin-left: 30%;">Credit Cheque</h3>
+<div class="jumbotron">
+    <form #creditUsingChequeForm="ngForm" (ngSubmit)="creditUsingCheque(creditUsingChequeForm)" >
+        
+          <div class="form-group row">
+            <label for="cheque_id" class="col-sm-2 col-form-label">Cheque Number</label>
+            <div class="col-sm-3 col-form-label">
+              <input type="text" class="form-control" #cheque_id="ngModel" id="cheque_id" name="cheque_id"  ngModel required>
+              <small id="cheque_id" class="form-text text-muted">Please enter only numbers</small>
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="amount" class="col-sm-2 col-form-label">Cheque Amount</label>
+          <div class="col-sm-3 col-form-label">
+            <input type="text" class="form-control"  #amount="ngModel" id="amount" name="amount" ngModel required>
+            <small id="amount" class="form-text text-muted">Please enter only numbers</small>
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="account_id" class="col-sm-2 col-form-label">Account Number</label>
+            <div class="col-sm-3 col-form-label">
+              <input type="text" class="form-control" #account_id="ngModel" id="account_id" name="account_id"  ngModel required>
+              <small id="account_id" class="form-text text-muted">Please enter only numbers</small>
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="issued_date" class="col-sm-2 col-form-label">Cheque Dated</label>
+          <div class="col-sm-3 col-form-label">
+            <input type="text" id="issued_date"  #issued_date="ngModel" name="issued_date" placeholder="YYYY-MM-DD" class="form-control" ngModel required> 
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="bank_name" class="col-sm-2 col-form-label">Bank  Name</label>
+          <div class="col-sm-3 col-form-label">
+            <input type="text" class="form-control" #bank_name="ngModel" id="bank_name" name="bank_name" ngModel required>
+            <small id="bank_name" class="form-text text-muted">Please Don't enter any secial character and number</small>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="ifsc" class="col-sm-2 col-form-label">IFSC CODE </label>
+          <div class="col-sm-3 col-form-label">
+            <input type="text" class="form-control" #ifsc="ngModel"  id="ifsc" name="ifsc" ngModel required>
+            <small id="ifsc" class="form-text text-muted">Please Don't enter any secial character</small>
+          </div>
+        </div>
+        
+        <button [disabled]="creditUsingChequeForm.form.invalid" class="btn btn-primary">Credit Amount</button>
+    </form>
+    
+</div>
